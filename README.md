@@ -150,7 +150,7 @@ of a flexible [matching and patching strategy](http://neil.fraser.name/writing/p
 ## Installation
 
 ```
-composer require yetanotherape/diff-match-patch
+composer require eggheads/diff-match-patch
 ```
 
 ## License
