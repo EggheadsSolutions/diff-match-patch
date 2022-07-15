@@ -16,6 +16,12 @@
             "homepage": "http://neil.fraser.name/"
         }
     ],
+    "conflict": {
+        "yetanotherape/diff-match-patch": "*"
+    },
+    "replace": {
+        "yetanotherape/diff-match-patch": "^1.1"
+    },
     "require": {
         "php": ">=7.3",
         "ext-iconv": "*",
