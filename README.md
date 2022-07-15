@@ -12,6 +12,8 @@ text:
 
 This is the port of Google's [diff-match-patch](https://github.com/google/diff-match-patch) library to PHP.
 
+Forked from original repository due to inactivity of author to fix some issues.
+
 ## Diff
 
 Compare two plain text and efficiently return a array of differences. It works with characters, but if you want 
