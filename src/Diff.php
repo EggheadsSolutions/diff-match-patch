@@ -969,13 +969,8 @@ class Diff
         if ($prevInternalEncoding != $newInternalEncoding) {
             mb_internal_encoding($newInternalEncoding);
 
-            $errorReportingLevel = error_reporting();
-            error_reporting($errorReportingLevel & ~E_NOTICE);
-
             $text1 = iconv($prevInternalEncoding, $newInternalEncoding, $text1);
             $text2 = iconv($prevInternalEncoding, $newInternalEncoding, $text2);
-
-            error_reporting($errorReportingLevel);
         }
 
         // Trim off common prefix (speedup).
