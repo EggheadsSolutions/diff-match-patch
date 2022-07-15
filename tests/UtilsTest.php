@@ -50,8 +50,8 @@ class UtilsTest extends TestCase
         $this->assertEquals(255, Utils::unicodeOrd('ÿ'));
         $this->assertEquals(256, Utils::unicodeOrd('Ā'));
         $this->assertEquals(260, Utils::unicodeOrd('Ą'));
-//        $this->assertEquals(65536, Utils::unicodeOrd('𐀀'));
-//        $this->assertEquals(128570, Utils::unicodeOrd('😺'));
+        $this->assertEquals(65536, Utils::unicodeOrd('𐀀'));
+        $this->assertEquals(128570, Utils::unicodeOrd('😺'));
     }
 
 

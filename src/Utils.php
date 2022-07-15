@@ -54,16 +54,13 @@ class Utils
      * @return int Code of given char.
      */
     public static function unicodeOrd($char) {
-        if (mb_internal_encoding() != 'UCS-2LE') {
-            $char = iconv(mb_internal_encoding(), 'UCS-2LE', $char);
+        if (mb_internal_encoding() != 'UCS-4LE') {
+            $char = iconv(mb_internal_encoding(), 'UCS-4LE', $char);
         }
 
-        $code = 0;
-        for ($i = 0; $i < strlen($char); $i++) {
-            $code += ord($char[$i]) * pow(256, $i);
-        }
+        $char = unpack('V', $char)[1];
 
-        return $code;
+        return $char;
     }
 
     /**
