@@ -38,10 +38,11 @@ class Utils
      * @return string Char with given code
      */
     public static function unicodeChr($code) {
-        // TODO this works by order of magnitude slower then chr()
-        $code = sprintf("%04x", $code);
-        $char = json_decode('"\u'.$code.'"');
-        $char = iconv('UTF-8', mb_internal_encoding(), $char);
+        $char = pack('V', $code);
+
+        if (mb_internal_encoding() != 'UCS-4LE') {
+            $char = iconv('UCS-4LE', mb_internal_encoding(), $char);
+        }
 
         return $char;
     }
